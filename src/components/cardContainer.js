@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Card } from "./basicCard.js";
-import back from "../resources/tarots/kult-tarot-back.jpg";
 
 const Container = styled.div`  
   padding-top: 20px;
@@ -18,24 +17,22 @@ const Row = styled.div`
   width: 100%;
 `;
 
-export const CardContainer = ({drawTarot}) => {
-
-  const flipped = false
+export const CardContainer = ({tarots}) => {
 
   return (
     <Container>
       <Row>
-        <Card flipped={flipped} number={'III'} />
+        <Card number={'III'} tarot={tarots[2]} />
       </Row>
 
       <Row>
-        <Card flipped={flipped} number={'II'} />
-        <Card flipped={flipped} number={'I'} />
-        <Card flipped={flipped} number={'IV'} />
+        <Card number={'II'} tarot={tarots[1]} />
+        <Card number={'I'} tarot={tarots[0]}/>
+        <Card number={'IV'} tarot={tarots[3]}/>
       </Row>
 
       <Row>
-        <Card flipped={flipped} number={'V'} />
+        <Card number={'V'} tarot={tarots=[4]}/>
       </Row>
     </Container>
   );

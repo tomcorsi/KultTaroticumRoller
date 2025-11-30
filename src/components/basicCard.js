@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 import back from "../resources/tarots/kult-tarot-back.jpg";
 
 export const StyledCard = styled.div`
@@ -25,13 +26,21 @@ export const StyledCard = styled.div`
   }
 `;
 
-export const Card = ({flipped, number}) => {
+export const Card = ({number, tarot}) => {
+
+    const [flipped, setFlipped] = useState(false)
+
+    const handleCardClick = () => {
+        setFlipped(true)
+    }
     
     return (
         flipped 
-        ? null
+        ? <StyledCard> 
+            <img src={tarot.imageSrc} />
+          </StyledCard>
         : <StyledCard>
-            <img src={back} />
+            <img src={back} onClick={handleCardClick} />
             <span>{number}</span>
         </StyledCard>    
     )
