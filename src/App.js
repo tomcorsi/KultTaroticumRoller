@@ -1,15 +1,12 @@
 import './App.css';
 import { CardContainer } from './components/cardContainer';
+import { Deck } from './components/deck';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+        <Deck />
         <CardContainer />
-        <p>
-          Some stuff here
-        </p>
-      </header>
     </div>
   );
 }
