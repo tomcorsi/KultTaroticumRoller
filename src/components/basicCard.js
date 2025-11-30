@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import back from "../resources/tarots/kult-tarot-back.jpg";
 
-export const Card = styled.div`
+export const StyledCard = styled.div`
   position: relative;
   width: 100%;
   max-width: 150px;
@@ -23,3 +24,15 @@ export const Card = styled.div`
     color: white;
   }
 `;
+
+export const Card = ({flipped, number}) => {
+    
+    return (
+        flipped 
+        ? null
+        : <StyledCard>
+            <img src={back} />
+            <span>{number}</span>
+        </StyledCard>    
+    )
+}

@@ -18,36 +18,24 @@ const Row = styled.div`
   width: 100%;
 `;
 
-export const CardContainer = () => {
+export const CardContainer = ({drawTarot}) => {
+
+  const flipped = false
+
   return (
     <Container>
       <Row>
-        <Card>
-          <img src={back} />
-          <span>I</span>
-        </Card>
+        <Card flipped={flipped} number={'III'} />
       </Row>
 
       <Row>
-        <Card>
-          <img src={back} />
-          <span>II</span>
-        </Card>
-        <Card>
-          <img src={back} />
-          <span>III</span>
-        </Card>
-        <Card>
-          <img src={back} />
-          <span>IV</span>
-        </Card>
+        <Card flipped={flipped} number={'II'} />
+        <Card flipped={flipped} number={'I'} />
+        <Card flipped={flipped} number={'IV'} />
       </Row>
 
       <Row>
-        <Card>
-          <img src={back} />
-          <span>V</span>
-        </Card>
+        <Card flipped={flipped} number={'V'} />
       </Row>
     </Container>
   );

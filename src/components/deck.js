@@ -8,11 +8,9 @@ const StyledDeck = styled.div`
 `
 
 
-export const Deck = () => {
+export const Deck = ({drawTarot}) => {
     return (
     <StyledDeck>
-        <Card>
-            <img src={back} />
-        </Card>
+        <Card />
     </StyledDeck>)
 }
