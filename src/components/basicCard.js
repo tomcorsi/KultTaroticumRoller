@@ -1,9 +1,25 @@
 import styled from "styled-components";
 
-export const Card = styled.img`
-  flex: 1 1 0;
+export const Card = styled.div`
+  position: relative;
+  width: 100%;
   max-width: 150px;
-  height: auto;    
-  display: block;
-  object-fit: contain;
+  flex: 1 1 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+  }
 `;

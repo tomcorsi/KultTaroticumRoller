@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Card} from "./basicCard.js"
+import { Card } from "./basicCard.js";
 import back from "../resources/tarots/kult-tarot-back.jpg";
 
 const Container = styled.div`  
@@ -22,17 +22,32 @@ export const CardContainer = () => {
   return (
     <Container>
       <Row>
-        <Card src={back} />
+        <Card>
+          <img src={back} />
+          <span>I</span>
+        </Card>
       </Row>
 
       <Row>
-        <Card src={back} />
-        <Card src={back} />
-        <Card src={back} />
+        <Card>
+          <img src={back} />
+          <span>II</span>
+        </Card>
+        <Card>
+          <img src={back} />
+          <span>III</span>
+        </Card>
+        <Card>
+          <img src={back} />
+          <span>IV</span>
+        </Card>
       </Row>
 
       <Row>
-        <Card src={back} />
+        <Card>
+          <img src={back} />
+          <span>V</span>
+        </Card>
       </Row>
     </Container>
   );
