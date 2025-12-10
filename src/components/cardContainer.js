@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Card } from './basicCard.js';
+import { useState } from 'react';
 
 const Container = styled.div`
   padding-top: 20px;
@@ -18,20 +19,52 @@ const Row = styled.div`
 `;
 
 export const CardContainer = ({ tarots }) => {
+  const [lastClickedCard, setLastClickedCard] = useState(0);
+
   return (
     <Container>
       <Row>
-        <Card number={'III'} tarot={tarots[2]} />
+        <Card
+          number={'III'}
+          id={3}
+          tarot={tarots[2]}
+          lastClickedCard={lastClickedCard}
+          setLastClickedCard={setLastClickedCard}
+        />
       </Row>
 
       <Row>
-        <Card number={'II'} tarot={tarots[1]} />
-        <Card number={'I'} tarot={tarots[0]} />
-        <Card number={'IV'} tarot={tarots[3]} />
+        <Card
+          number={'II'}
+          id={2}
+          tarot={tarots[1]}
+          lastClickedCard={lastClickedCard}
+          setLastClickedCard={setLastClickedCard}
+        />
+        <Card
+          number={'I'}
+          id={1}
+          tarot={tarots[0]}
+          lastClickedCard={lastClickedCard}
+          setLastClickedCard={setLastClickedCard}
+        />
+        <Card
+          number={'IV'}
+          id={4}
+          tarot={tarots[3]}
+          lastClickedCard={lastClickedCard}
+          setLastClickedCard={setLastClickedCard}
+        />
       </Row>
 
       <Row>
-        <Card number={'V'} tarot={tarots[4]} />
+        <Card
+          number={'V'}
+          id={5}
+          tarot={tarots[4]}
+          lastClickedCard={lastClickedCard}
+          setLastClickedCard={setLastClickedCard}
+        />
       </Row>
     </Container>
   );

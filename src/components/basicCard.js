@@ -28,14 +28,20 @@ export const StyledCard = styled.div`
 
 export const Card = ({
   number,
+  id,
   tarot,
   isMainDeck = false,
   onMainDeckClick,
+  lastClickedCard,
+  setLastClickedCard,
 }) => {
   const [flipped, setFlipped] = useState(false);
 
   const handleCardClick = () => {
-    setFlipped(true);
+    if (id - lastClickedCard === 1) {
+      setLastClickedCard(id);
+      setFlipped(true);
+    }
   };
 
   return flipped ? (
