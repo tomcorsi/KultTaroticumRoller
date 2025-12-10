@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { useState } from "react";
-import back from "../resources/images/kult-tarot-back.jpg";
+import styled from 'styled-components';
+import { useState } from 'react';
+import back from '../resources/images/kult-tarot-back.jpg';
 
 export const StyledCard = styled.div`
   position: relative;

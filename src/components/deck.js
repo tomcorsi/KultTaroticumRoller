@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Card } from "./basicCard";
+import styled from 'styled-components';
+import { Card } from './basicCard';
 
 const StyledDeck = styled.div`
   display: flex;

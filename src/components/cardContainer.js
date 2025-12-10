@@ -1,13 +1,13 @@
-import styled from "styled-components";
-import { Card } from "./basicCard.js";
+import styled from 'styled-components';
+import { Card } from './basicCard.js';
 
-const Container = styled.div`  
+const Container = styled.div`
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 20px;
   align-items: center;
-  width: 100%; 
+  width: 100%;
 `;
 
 const Row = styled.div`
@@ -17,8 +17,7 @@ const Row = styled.div`
   width: 100%;
 `;
 
-export const CardContainer = ({tarots}) => {
-
+export const CardContainer = ({ tarots }) => {
   return (
     <Container>
       <Row>
@@ -27,13 +26,13 @@ export const CardContainer = ({tarots}) => {
 
       <Row>
         <Card number={'II'} tarot={tarots[1]} />
-        <Card number={'I'} tarot={tarots[0]}/>
-        <Card number={'IV'} tarot={tarots[3]}/>
+        <Card number={'I'} tarot={tarots[0]} />
+        <Card number={'IV'} tarot={tarots[3]} />
       </Row>
 
       <Row>
-        <Card number={'V'} tarot={tarots[4]}/>
+        <Card number={'V'} tarot={tarots[4]} />
       </Row>
     </Container>
   );
-}
+};

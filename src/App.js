@@ -1,9 +1,9 @@
-import { useState } from "react";
-import "./App.css";
-import { CardContainer } from "./components/cardContainer";
-import { Deck } from "./components/deck";
-import { tarotList } from "./resources/tarotList";
-import { draw5Tarots } from "./components/helpers/drawCards";
+import { useState } from 'react';
+import './App.css';
+import { CardContainer } from './components/cardContainer';
+import { Deck } from './components/deck';
+import { tarotList } from './resources/tarotList';
+import { draw5Tarots } from './components/helpers/drawCards';
 
 function App() {
   const [tarots, setTarots] = useState([]);
