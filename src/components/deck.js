@@ -1,15 +1,15 @@
-import styled from "styled-components"
-import { Card } from "./basicCard"
+import styled from "styled-components";
+import { Card } from "./basicCard";
 
 const StyledDeck = styled.div`
-    display: flex;
-    flex-direction: column;
-`
+  display: flex;
+  flex-direction: column;
+`;
 
-
-export const Deck = ({drawTarot}) => {
-    return (
+export const Deck = ({ tellFortune }) => {
+  return (
     <StyledDeck>
-        <Card />
-    </StyledDeck>)
-}
+      <Card isMainDeck={true} onMainDeckClick={tellFortune} />
+    </StyledDeck>
+  );
+};

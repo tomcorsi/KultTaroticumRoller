@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import back from "../resources/images/kult-tarot-back.jpg"
+import back from "../resources/images/kult-tarot-back.jpg";
 
 export const StyledCard = styled.div`
   position: relative;
@@ -26,22 +26,29 @@ export const StyledCard = styled.div`
   }
 `;
 
-export const Card = ({number, tarot}) => {
+export const Card = ({
+  number,
+  tarot,
+  isMainDeck = false,
+  onMainDeckClick,
+}) => {
+  const [flipped, setFlipped] = useState(false);
 
-    const [flipped, setFlipped] = useState(false)
+  const handleCardClick = () => {
+    setFlipped(true);
+  };
 
-    const handleCardClick = () => {
-        setFlipped(true)
-    }
-    
-    return (
-        flipped 
-        ? <StyledCard> 
-            <img src={tarot.imageSrc} />
-          </StyledCard>
-        : <StyledCard>
-            <img src={back} onClick={handleCardClick} />
-            <span>{number}</span>
-        </StyledCard>    
-    )
-}
+  return flipped ? (
+    <StyledCard>
+      <img src={tarot?.imageSrc} />
+    </StyledCard>
+  ) : (
+    <StyledCard>
+      <img
+        src={back}
+        onClick={isMainDeck ? onMainDeckClick : handleCardClick}
+      />
+      <span>{number}</span>
+    </StyledCard>
+  );
+};
