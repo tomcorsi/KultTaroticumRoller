@@ -32,7 +32,7 @@ export const CardContainer = ({tarots}) => {
       </Row>
 
       <Row>
-        <Card number={'V'} tarot={tarots=[4]}/>
+        <Card number={'V'} tarot={tarots[4]}/>
       </Row>
     </Container>
   );
