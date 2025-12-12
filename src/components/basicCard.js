@@ -4,12 +4,12 @@ import back from '../resources/images/kult-tarot-back.jpg';
 
 export const StyledCard = styled.div`
   position: relative;
-  width: 100%;
+  width: 150px;
   max-width: 150px;
-  flex: 1 1 0;
+  flex: 0 0 150px;
 
   img {
-    width: 100%;
+    width: 150px;
     height: auto;
     display: block;
     object-fit: contain;

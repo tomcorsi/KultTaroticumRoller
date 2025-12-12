@@ -4,6 +4,7 @@ import { CardContainer } from './components/cardContainer';
 import { Deck } from './components/deck';
 import { tarotList } from './resources/tarotList';
 import { draw5Tarots } from './components/helpers/drawCards';
+import { DescriptionsContainer } from './components/descriptionContainer';
 
 function App() {
   const [tarots, setTarots] = useState([]);
@@ -18,7 +19,10 @@ function App() {
   return (
     <div className="App">
       <Deck tellFortune={tellFortune} />
-      {areTarotsDrawn ? <CardContainer tarots={tarots} /> : null}
+      <div className="CenterArea">
+        {areTarotsDrawn ? <CardContainer tarots={tarots} /> : null}
+        <DescriptionsContainer />
+      </div>
     </div>
   );
 }

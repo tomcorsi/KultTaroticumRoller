@@ -8,7 +8,9 @@ const Container = styled.div`
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
+  /* background-color: green; */
 `;
 
 const Row = styled.div`
@@ -16,6 +18,8 @@ const Row = styled.div`
   gap: 20px;
   justify-content: center;
   width: 100%;
+  overflow-x: auto;
+  padding-bottom: 4px;
 `;
 
 export const CardContainer = ({ tarots }) => {
