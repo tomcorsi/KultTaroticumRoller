@@ -22,12 +22,7 @@ const Row = styled.div`
   padding-bottom: 4px;
 `;
 
-export const CardContainer = ({
-  tarots,
-  setClickedCard,
-  revealedCards,
-  setRevealedCards,
-}) => {
+export const CardContainer = ({ tarots, revealedCards, setRevealedCards }) => {
   const [lastClickedCard, setLastClickedCard] = useState(0);
 
   return (
@@ -39,7 +34,6 @@ export const CardContainer = ({
           tarot={tarots[2]}
           lastClickedCard={lastClickedCard}
           setLastClickedCard={setLastClickedCard}
-          setClickedCard={setClickedCard}
           revealedCards={revealedCards}
           setRevealedCards={setRevealedCards}
         />
@@ -52,7 +46,6 @@ export const CardContainer = ({
           tarot={tarots[1]}
           lastClickedCard={lastClickedCard}
           setLastClickedCard={setLastClickedCard}
-          setClickedCard={setClickedCard}
           revealedCards={revealedCards}
           setRevealedCards={setRevealedCards}
         />
@@ -62,7 +55,6 @@ export const CardContainer = ({
           tarot={tarots[0]}
           lastClickedCard={lastClickedCard}
           setLastClickedCard={setLastClickedCard}
-          setClickedCard={setClickedCard}
           revealedCards={revealedCards}
           setRevealedCards={setRevealedCards}
         />
@@ -72,7 +64,6 @@ export const CardContainer = ({
           tarot={tarots[3]}
           lastClickedCard={lastClickedCard}
           setLastClickedCard={setLastClickedCard}
-          setClickedCard={setClickedCard}
           revealedCards={revealedCards}
           setRevealedCards={setRevealedCards}
         />
@@ -85,7 +76,6 @@ export const CardContainer = ({
           tarot={tarots[4]}
           lastClickedCard={lastClickedCard}
           setLastClickedCard={setLastClickedCard}
-          setClickedCard={setClickedCard}
           revealedCards={revealedCards}
           setRevealedCards={setRevealedCards}
         />

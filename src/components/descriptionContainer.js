@@ -30,18 +30,12 @@ const TarotDescriptor = ({ tarot, revealedCards }) => {
   }
 };
 
-export const DescriptionsContainer = ({
-  tarots,
-  revealedCards,
-  clickedCard,
-}) => {
+export const DescriptionsContainer = ({ tarots, revealedCards }) => {
   const firstTarot = tarots[0];
   const secondTarot = tarots[1];
   const thirdTarot = tarots[2];
   const fourthTarot = tarots[3];
   const fifthTarot = tarots[4];
-
-  const revealedCard = tarots[clickedCard - 1];
 
   return (
     <StyledDescriptionContainer>

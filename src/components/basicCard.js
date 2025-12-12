@@ -34,7 +34,6 @@ export const Card = ({
   onMainDeckClick,
   lastClickedCard,
   setLastClickedCard,
-  setClickedCard,
   revealedCards,
   setRevealedCards,
 }) => {
@@ -44,7 +43,6 @@ export const Card = ({
     if (id - lastClickedCard === 1) {
       setLastClickedCard(id);
       setFlipped(true);
-      setClickedCard(id);
       setRevealedCards([...revealedCards, tarot.id]);
     }
   };

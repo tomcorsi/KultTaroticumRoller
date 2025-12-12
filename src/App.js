@@ -8,7 +8,6 @@ import { DescriptionsContainer } from './components/descriptionContainer';
 
 function App() {
   const [tarots, setTarots] = useState([]);
-  const [clickedCard, setClickedCard] = useState();
   const [revealedCards, setRevealedCards] = useState([]);
 
   const areTarotsDrawn = tarots.length === 5;
@@ -25,7 +24,6 @@ function App() {
         {areTarotsDrawn ? (
           <CardContainer
             tarots={tarots}
-            setClickedCard={setClickedCard}
             revealedCards={revealedCards}
             setRevealedCards={setRevealedCards}
           />
@@ -33,7 +31,6 @@ function App() {
         {areTarotsDrawn ? (
           <DescriptionsContainer
             tarots={tarots}
-            clickedCard={clickedCard}
             revealedCards={revealedCards}
           />
         ) : null}
