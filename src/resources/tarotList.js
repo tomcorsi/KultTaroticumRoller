@@ -1,3 +1,4 @@
+import { descriptions } from './descriptions';
 import anthropos from './images/00-anthropos.jpg';
 import demiurgos from './images/01-demiurgos.jpg';
 import astaroth from './images/02-astaroth.jpg';
@@ -11,16 +12,19 @@ export const majorArcana = [
     id: 'Anthropos',
     number: 0,
     imageSrc: anthropos,
+    description: descriptions.anthropos,
   },
   {
     id: 'Demiurgos',
     number: 1,
     imageSrc: demiurgos,
+    description: descriptions.demiurgos,
   },
   {
     id: 'Astaroth',
     number: 2,
     imageSrc: astaroth,
+    description: descriptions.astaroth,
   },
   {
     id: 'Kether',

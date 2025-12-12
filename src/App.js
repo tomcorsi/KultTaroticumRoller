@@ -21,7 +21,7 @@ function App() {
       <Deck tellFortune={tellFortune} />
       <div className="CenterArea">
         {areTarotsDrawn ? <CardContainer tarots={tarots} /> : null}
-        <DescriptionsContainer />
+        {areTarotsDrawn ? <DescriptionsContainer tarots={tarots} /> : null}
       </div>
     </div>
   );
