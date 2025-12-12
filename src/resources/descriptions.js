@@ -15,15 +15,23 @@ export const descriptions = {
     paragraph: `La carta parla di una connessione diretta con il Potere Superiore che è Astaroth e ha forti legami con: La Volontà dell'Inferno. Il Sole Nero. Le Cittadelle degli Angeli della Morte. La Ruota Chiodata. Ciò che cresce dalla Morte. La Macchina della Morte e della Rinascita. Pulsare e Crescere. Volontà Intrecciate. Sentieri e Porte verso Mondi Frantumati. Qualsiasi Sofferenza Immaginabile. Bellezza Insensata. Un Potere in Crescita. Crepe nell'Illusione. Volontà dietro il Velo. Questa carta è una delle tre più potenti dell'intera Arcana, insieme ad Anthropos e al Demiurgo, e rivela sempre qualcosa di grande importanza. Quando questa carta viene estratta, potrebbe essere opportuno estrarne un'altra e collocarla sopra di essa per mostrare come il suo potere si manifesta.`,
   },
   kether: {
-    location: 'kether location',
+    name: 'Kether',
+    general: `placeholder`,
+    paragraph: `placeholder`,
   },
   chokmah: {
-    location: 'chokmah location',
+    name: 'Chokmah',
+    general: `placeholder`,
+    paragraph: `placeholder`,
   },
   binah: {
-    location: 'binah location',
+    name: 'Binah',
+    general: `placeholder`,
+    paragraph: `placeholder`,
   },
   chesed: {
-    location: 'chesed location',
+    name: 'Chesed',
+    general: `placeholder`,
+    paragraph: `placeholder`,
   },
 };

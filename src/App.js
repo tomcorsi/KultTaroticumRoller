@@ -8,6 +8,8 @@ import { DescriptionsContainer } from './components/descriptionContainer';
 
 function App() {
   const [tarots, setTarots] = useState([]);
+  const [clickedCard, setClickedCard] = useState();
+  const [revealedCards, setRevealedCards] = useState([]);
 
   const areTarotsDrawn = tarots.length === 5;
 
@@ -20,8 +22,21 @@ function App() {
     <div className="App">
       <Deck tellFortune={tellFortune} />
       <div className="CenterArea">
-        {areTarotsDrawn ? <CardContainer tarots={tarots} /> : null}
-        {areTarotsDrawn ? <DescriptionsContainer tarots={tarots} /> : null}
+        {areTarotsDrawn ? (
+          <CardContainer
+            tarots={tarots}
+            setClickedCard={setClickedCard}
+            revealedCards={revealedCards}
+            setRevealedCards={setRevealedCards}
+          />
+        ) : null}
+        {areTarotsDrawn ? (
+          <DescriptionsContainer
+            tarots={tarots}
+            clickedCard={clickedCard}
+            revealedCards={revealedCards}
+          />
+        ) : null}
       </div>
     </div>
   );

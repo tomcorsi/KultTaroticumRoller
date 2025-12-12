@@ -22,7 +22,12 @@ const Row = styled.div`
   padding-bottom: 4px;
 `;
 
-export const CardContainer = ({ tarots }) => {
+export const CardContainer = ({
+  tarots,
+  setClickedCard,
+  revealedCards,
+  setRevealedCards,
+}) => {
   const [lastClickedCard, setLastClickedCard] = useState(0);
 
   return (
@@ -34,6 +39,9 @@ export const CardContainer = ({ tarots }) => {
           tarot={tarots[2]}
           lastClickedCard={lastClickedCard}
           setLastClickedCard={setLastClickedCard}
+          setClickedCard={setClickedCard}
+          revealedCards={revealedCards}
+          setRevealedCards={setRevealedCards}
         />
       </Row>
 
@@ -44,6 +52,9 @@ export const CardContainer = ({ tarots }) => {
           tarot={tarots[1]}
           lastClickedCard={lastClickedCard}
           setLastClickedCard={setLastClickedCard}
+          setClickedCard={setClickedCard}
+          revealedCards={revealedCards}
+          setRevealedCards={setRevealedCards}
         />
         <Card
           number={'I'}
@@ -51,6 +62,9 @@ export const CardContainer = ({ tarots }) => {
           tarot={tarots[0]}
           lastClickedCard={lastClickedCard}
           setLastClickedCard={setLastClickedCard}
+          setClickedCard={setClickedCard}
+          revealedCards={revealedCards}
+          setRevealedCards={setRevealedCards}
         />
         <Card
           number={'IV'}
@@ -58,6 +72,9 @@ export const CardContainer = ({ tarots }) => {
           tarot={tarots[3]}
           lastClickedCard={lastClickedCard}
           setLastClickedCard={setLastClickedCard}
+          setClickedCard={setClickedCard}
+          revealedCards={revealedCards}
+          setRevealedCards={setRevealedCards}
         />
       </Row>
 
@@ -68,6 +85,9 @@ export const CardContainer = ({ tarots }) => {
           tarot={tarots[4]}
           lastClickedCard={lastClickedCard}
           setLastClickedCard={setLastClickedCard}
+          setClickedCard={setClickedCard}
+          revealedCards={revealedCards}
+          setRevealedCards={setRevealedCards}
         />
       </Row>
     </Container>

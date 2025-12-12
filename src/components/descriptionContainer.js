@@ -16,31 +16,40 @@ const TarotParagraph = styled.p`
   font-size: large;
 `;
 
-const TarotDescriptor = ({ description }) => {
-  return (
-    <>
-      <TarotName>{description?.name}</TarotName>
-      <TarotGeneric>{description?.general}</TarotGeneric>
-      <TarotParagraph>{description?.paragraph}</TarotParagraph>
-    </>
-  );
+const TarotDescriptor = ({ tarot, revealedCards }) => {
+  const description = tarot?.description;
+
+  if (revealedCards.includes(tarot?.id)) {
+    return (
+      <>
+        <TarotName>{description?.name}</TarotName>
+        <TarotGeneric>{description?.general}</TarotGeneric>
+        <TarotParagraph>{description?.paragraph}</TarotParagraph>
+      </>
+    );
+  }
 };
 
-export const DescriptionsContainer = ({ tarots }) => {
-  console.log('tarots in descriptions', tarots);
-
+export const DescriptionsContainer = ({
+  tarots,
+  revealedCards,
+  clickedCard,
+}) => {
   const firstTarot = tarots[0];
   const secondTarot = tarots[1];
   const thirdTarot = tarots[2];
   const fourthTarot = tarots[3];
   const fifthTarot = tarots[4];
+
+  const revealedCard = tarots[clickedCard - 1];
+
   return (
     <StyledDescriptionContainer>
-      <TarotDescriptor description={firstTarot?.description} />
-      <TarotDescriptor description={secondTarot?.description} />
-      <TarotDescriptor description={thirdTarot?.description} />
-      <TarotDescriptor description={fourthTarot?.description} />
-      <TarotDescriptor description={fifthTarot?.description} />
+      <TarotDescriptor tarot={firstTarot} revealedCards={revealedCards} />
+      <TarotDescriptor tarot={secondTarot} revealedCards={revealedCards} />
+      <TarotDescriptor tarot={thirdTarot} revealedCards={revealedCards} />
+      <TarotDescriptor tarot={fourthTarot} revealedCards={revealedCards} />
+      <TarotDescriptor tarot={fifthTarot} revealedCards={revealedCards} />
     </StyledDescriptionContainer>
   );
 };

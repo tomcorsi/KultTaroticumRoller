@@ -30,21 +30,25 @@ export const majorArcana = [
     id: 'Kether',
     number: 3,
     imageSrc: kether,
+    description: descriptions.kether,
   },
   {
     id: 'Chokmah',
     number: 4,
     imageSrc: chokmah,
+    description: descriptions.chokmah,
   },
   {
     id: 'Binah',
     number: 5,
     imageSrc: binah,
+    description: descriptions.binah,
   },
   {
     id: 'Chesed',
     number: 6,
     imageSrc: chesed,
+    description: descriptions.chesed,
   },
 ];
 export const minorArcana = [];
